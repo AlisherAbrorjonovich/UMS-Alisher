@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/card_tariflar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintRight_toLeftOf="@id/card_daqiqalar"
+        app:layout_constraintTop_toBottomOf="@id/dor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/card_internet"
+        >
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:src="@drawable/img_3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Tariflar"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+<LinearLayout
+        android:id="@+id/card_daqiqalar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/dor"
+    app:layout_constraintLeft_toRightOf="@id/card_tariflar"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/card_xizmatlar"
+        >
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:src="@drawable/img_6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Daqiqalar"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+<LinearLayout
+        android:id="@+id/card_internet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/card_tariflar"
+        app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@id/card_xizmatlar"
+    app:layout_constraintBottom_toTopOf="@id/card_sms"
+        >
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="102dp"
+            android:src="@drawable/img_2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="  Internet"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+<LinearLayout
+        android:id="@+id/card_xizmatlar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/card_daqiqalar"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toRightOf="@id/card_internet"
+    app:layout_constraintBottom_toTopOf="@id/card_news"
+        >
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:src="@drawable/img_1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Xizmatlar"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+<LinearLayout
+        android:id="@+id/card_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/card_internet"
+        app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@id/card_news"
+    app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:src="@drawable/img_4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     SMS"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+<LinearLayout
+        android:id="@+id/card_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/card_xizmatlar"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toRightOf="@id/card_sms"
+    app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:src="@drawable/img_5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yangiliklar"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
